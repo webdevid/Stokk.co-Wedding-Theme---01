@@ -175,3 +175,35 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+function stokk_add_widget_tabs($tabs) {
+    $tabs[] = array(
+        'title' => __('Stokk.co', 'stokk'),
+        'filter' => array(
+            'groups' => array('stokk')
+        )
+    );
+
+    return $tabs;
+}
+add_filter('siteorigin_panels_widget_dialog_tabs', 'stokk_add_widget_tabs', 20);
+
+function stokk_add_widget_icons($widgets){
+    $widgets['My_Widget']['groups'] = array('stokk');
+    return $widgets;
+}
+add_filter('siteorigin_panels_widgets', 'stokk_add_widget_icons');
+
+function stokk_base_url(){
+	echo '
+		<script>
+			var stokk_base_uri = "'.get_template_directory_uri().'"
+		</script>
+		<style>
+		.admin-bar .header-middle{ top:32px; }
+		</style>
+	';
+}
+
+add_action( 'wp_head', 'stokk_base_url');

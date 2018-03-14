@@ -77,5 +77,5 @@
 
 
 	<?php 
-		echo get_template_part( 'assets/pages/template', 'sections' );
+		//echo get_template_part( 'assets/pages/template', 'sections' );
 	?>

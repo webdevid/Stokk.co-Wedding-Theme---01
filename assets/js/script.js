@@ -323,7 +323,7 @@
 
         // Define the image to use for the map marker (58 x 44 px)
 
-        var image = 'images/wedding/map/cd-icon-love.png';
+        var image = stokk_base_uri+'/assets/images/wedding/map/cd-icon-love.png';
 
         // Define the Lattitude and Longitude for the map location
         var locations = [
