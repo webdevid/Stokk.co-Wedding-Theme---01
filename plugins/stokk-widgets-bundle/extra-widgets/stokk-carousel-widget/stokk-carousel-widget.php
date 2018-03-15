@@ -78,12 +78,6 @@ class Stokk_Carousel_Widget extends SiteOrigin_Widget {
 						'type' => 'text',
 						'label' => __('Bottom title', 'so-widgets-bundle')
 					),
-					'slide_badge' => array(
-						'type' => 'media',
-						'label' => __('Image file', 'so-widgets-bundle'),
-						'library' => 'image',
-						'fallback' => true,
-					),
 				)
 			)
 		);
