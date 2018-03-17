@@ -100,7 +100,9 @@
         speed: 0.2
     });
 
-    jQuery('#countdown').countdown('2018/12/12', function (event) {
+
+    var js_countdown = jQuery('#countdown').data('countdown');
+    jQuery('#countdown').countdown(js_countdown, function (event) {
         jQuery(this).html(event.strftime('<ul class="countdown_timer text-center text-metallics">'
             + '<li class="col-3 col-lg-3"><div class="shape-countdown"><span class="time"> %D </span><span class="meta"> days </span></div></li>'
             + '<li class="col-3 col-lg-3"><div class="shape-countdown"><span class="time"> %H </span><span class="meta"> Hours </span></div></li>'
