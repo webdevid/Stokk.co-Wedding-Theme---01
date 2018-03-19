@@ -5,31 +5,35 @@
             <div class="col-12">
                 <ul class="nav  col-lg-8 mx-auto justify-content-center text-center mb-5">
                     <li class="nav-item">
-                        <a class="nav-tab active" id="brides-tab" data-toggle="pill" href="#tab-brides" aria-selected="true">BRIDES MAID</a>
+                        <a class="nav-tab active" id="brides-tab" data-toggle="pill" href="#tab-brides" aria-selected="true"><?php echo esc_html($brides_maid['nav_title']); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-tab font-two text-color-secondary" id="brides-tab" data-toggle="pill" href="#tab-friends" aria-selected="true">Friends & Colleagues</small>
-                    </li>
+                        <a class="nav-tab font-two text-color-secondary" id="brides-tab" data-toggle="pill" href="#tab-friends" aria-selected="true"><?php echo esc_html($friends_colleagues['nav_title']); ?></small>
+                    </li> 
                     <li class="nav-item">
-                        <a class="nav-tab" id="grooms-tab" data-toggle="pill" href="#tab-grooms" aria-selected="false">GROOMS MEN</a>
+                        <a class="nav-tab" id="grooms-tab" data-toggle="pill" href="#tab-grooms" aria-selected="false"><?php echo esc_html($grooms_men['nav_title']); ?></a>
                     </li>
                 </ul>
                 <div class="tab-content text-center" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="tab-brides">
                         <div class="card-deck">
                             <div class="card">
-                                <div class="card-image">
-                                    <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/assets/images/wedding/brides-01.jpg" alt="Card image cap">
-                                    <div class="show_icon">
+                                <div class="card-image"> 
+                                <?php 
+                                if($brides_maid['image_a'][0]){
+                                    echo '<img class="card-img-top" src="'.$brides_maid['image_a'][0].'" alt="Card image cap">';
+                                }
+                                ?>
+                                <div class="show_icon">
                                         <div class="hero-icon_wrapper d-flex align-items-center text-center">
                                             <div class="hero-icon_inner mx-auto">
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($brides_maid['fb_link_a']); ?>">
                                                     <i class="fa fa-facebook"></i>
                                                 </a>
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($brides_maid['tw_link_a']); ?>">
                                                     <i class="fa fa-twitter"></i>
                                                 </a>
-                                                <a class="mx-2 mr-3" href="#">
+                                                <a class="mx-2 mr-3" href="<?php echo esc_url($brides_maid['ig_link_a']); ?>">
                                                     <i class="fa fa-instagram"></i>
                                                 </a>
                                             </div>
@@ -37,23 +41,55 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Evelyn Brewer</h4>
-                                    <p class="card-text">Cousin</p>
+                                    <h4 class="card-title"><?php echo esc_html($brides_maid['name_a']); ?></h4>
+                                    <p class="card-text"><?php echo esc_html($brides_maid['status_a']); ?></p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-image"> 
+                                <?php 
+                                if($brides_maid['image_b'][0]){
+                                    echo '<img class="card-img-top" src="'.$brides_maid['image_b'][0].'" alt="Card image cap">';
+                                }
+                                ?>
+                                    <div class="show_icon">
+                                        <div class="hero-icon_wrapper d-flex align-items-center text-center">
+                                            <div class="hero-icon_inner mx-auto">
+                                                <a class="mx-2" href="<?php echo esc_url($brides_maid['fb_link_b']); ?>">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                                <a class="mx-2" href="<?php echo esc_url($brides_maid['tw_link_b']); ?>">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                                <a class="mx-2 mr-3" href="<?php echo esc_url($brides_maid['ig_link_b']); ?>">
+                                                    <i class="fa fa-instagram"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title"><?php echo esc_html($brides_maid['name_b']); ?></h4>
+                                    <p class="card-text"><?php echo esc_html($brides_maid['status_b']); ?></p>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-image">
-                                    <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/assets/images/wedding/brides-02.jpg" alt="Card image cap">
+                                <?php 
+                                if($brides_maid['image_c'][0]){
+                                    echo '<img class="card-img-top" src="'.$brides_maid['image_c'][0].'" alt="Card image cap">';
+                                }
+                                ?>
                                     <div class="show_icon">
                                         <div class="hero-icon_wrapper d-flex align-items-center text-center">
                                             <div class="hero-icon_inner mx-auto">
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($brides_maid['fb_link_c']); ?>">
                                                     <i class="fa fa-facebook"></i>
                                                 </a>
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($brides_maid['tw_link_c']); ?>">
                                                     <i class="fa fa-twitter"></i>
                                                 </a>
-                                                <a class="mx-2 mr-3" href="#">
+                                                <a class="mx-2 mr-3" href="<?php echo esc_url($brides_maid['ig_link_c']); ?>">
                                                     <i class="fa fa-instagram"></i>
                                                 </a>
                                             </div>
@@ -61,23 +97,27 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Sharon Warren</h4>
-                                    <p class="card-text">Cousin</p>
+                                    <h4 class="card-title"><?php echo esc_html($brides_maid['name_c']); ?></h4>
+                                    <p class="card-text"><?php echo esc_html($brides_maid['status_c']); ?></p>
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="card-image">
-                                    <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/assets/images/wedding/brides-03.jpg" alt="Card image cap">
+                                <div class="card-image"> 
+                                <?php 
+                                if($brides_maid['image_d'][0]){
+                                    echo '<img class="card-img-top" src="'.$brides_maid['image_d'][0].'" alt="Card image cap">';
+                                }
+                                ?>
                                     <div class="show_icon">
                                         <div class="hero-icon_wrapper d-flex align-items-center text-center">
                                             <div class="hero-icon_inner mx-auto">
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($brides_maid['fb_link_d']); ?>">
                                                     <i class="fa fa-facebook"></i>
                                                 </a>
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($brides_maid['tw_link_d']); ?>">
                                                     <i class="fa fa-twitter"></i>
                                                 </a>
-                                                <a class="mx-2 mr-3" href="#">
+                                                <a class="mx-2 mr-3" href="<?php echo esc_url($brides_maid['ig_link_d']); ?>">
                                                     <i class="fa fa-instagram"></i>
                                                 </a>
                                             </div>
@@ -85,32 +125,8 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Shirley Hunt</h4>
-                                    <p class="card-text">Cousin</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-image">
-                                    <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/assets/images/wedding/brides-04.jpg" alt="Card image cap">
-                                    <div class="show_icon">
-                                        <div class="hero-icon_wrapper d-flex align-items-center text-center">
-                                            <div class="hero-icon_inner mx-auto">
-                                                <a class="mx-2" href="#">
-                                                    <i class="fa fa-facebook"></i>
-                                                </a>
-                                                <a class="mx-2" href="#">
-                                                    <i class="fa fa-twitter"></i>
-                                                </a>
-                                                <a class="mx-2 mr-3" href="#">
-                                                    <i class="fa fa-instagram"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="card-title">Carol Bradley</h4>
-                                    <p class="card-text">Cousin</p>
+                                    <h4 class="card-title"><?php echo esc_html($brides_maid['name_d']); ?></h4>
+                                    <p class="card-text"><?php echo esc_html($brides_maid['status_d']); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -119,17 +135,21 @@
                         <div class="card-deck">
                             <div class="card">
                                 <div class="card-image">
-                                    <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/assets/images/wedding/grooms-02.jpg" alt="Card image cap">
+                                <?php 
+                                if($friends_colleagues['image_a'][0]){
+                                    echo '<img class="card-img-top" src="'.$friends_colleagues['image_a'][0].'" alt="Card image cap">';
+                                }
+                                ?>
                                     <div class="show_icon">
                                         <div class="hero-icon_wrapper d-flex align-items-center text-center">
                                             <div class="hero-icon_inner mx-auto">
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($friends_colleagues['fb_link_a']); ?>">
                                                     <i class="fa fa-facebook"></i>
                                                 </a>
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($friends_colleagues['tw_link_a']); ?>">
                                                     <i class="fa fa-twitter"></i>
                                                 </a>
-                                                <a class="mx-2 mr-3" href="#">
+                                                <a class="mx-2 mr-3" href="<?php echo esc_url($friends_colleagues['ig_link_a']); ?>">
                                                     <i class="fa fa-instagram"></i>
                                                 </a>
                                             </div>
@@ -137,23 +157,27 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Jeffrey Wagner</h4>
-                                    <p class="card-text">Cousin</p>
+                                    <h4 class="card-title"><?php echo esc_html($friends_colleagues['name_a']); ?></h4>
+                                    <p class="card-text"><?php echo esc_html($friends_colleagues['status_a']); ?></p>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-image">
-                                    <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/assets/images/wedding/brides-02.jpg" alt="Card image cap">
+                                <?php 
+                                if($friends_colleagues['image_b'][0]){
+                                    echo '<img class="card-img-top" src="'.$friends_colleagues['image_b'][0].'" alt="Card image cap">';
+                                }
+                                ?>
                                     <div class="show_icon">
                                         <div class="hero-icon_wrapper d-flex align-items-center text-center">
                                             <div class="hero-icon_inner mx-auto">
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($friends_colleagues['fb_link_b']); ?>">
                                                     <i class="fa fa-facebook"></i>
                                                 </a>
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($friends_colleagues['tw_link_b']); ?>">
                                                     <i class="fa fa-twitter"></i>
                                                 </a>
-                                                <a class="mx-2 mr-3" href="#">
+                                                <a class="mx-2 mr-3" href="<?php echo esc_url($friends_colleagues['ig_link_b']); ?>">
                                                     <i class="fa fa-instagram"></i>
                                                 </a>
                                             </div>
@@ -161,23 +185,27 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Sharon Warren</h4>
-                                    <p class="card-text">Cousin</p>
+                                    <h4 class="card-title"><?php echo esc_html($friends_colleagues['name_b']); ?></h4>
+                                    <p class="card-text"><?php echo esc_html($friends_colleagues['status_b']); ?></p>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-image">
-                                    <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/assets/images/wedding/grooms-04.jpg" alt="Card image cap">
+                                <?php 
+                                if($friends_colleagues['image_c'][0]){
+                                    echo '<img class="card-img-top" src="'.$friends_colleagues['image_c'][0].'" alt="Card image cap">';
+                                }
+                                ?>
                                     <div class="show_icon">
                                         <div class="hero-icon_wrapper d-flex align-items-center text-center">
                                             <div class="hero-icon_inner mx-auto">
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($friends_colleagues['fb_link_c']); ?>">
                                                     <i class="fa fa-facebook"></i>
                                                 </a>
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($friends_colleagues['tw_link_c']); ?>">
                                                     <i class="fa fa-twitter"></i>
                                                 </a>
-                                                <a class="mx-2 mr-3" href="#">
+                                                <a class="mx-2 mr-3" href="<?php echo esc_url($friends_colleagues['ig_link_c']); ?>">
                                                     <i class="fa fa-instagram"></i>
                                                 </a>
                                             </div>
@@ -185,23 +213,27 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Daniel Williams</h4>
-                                    <p class="card-text">Cousin</p>
+                                    <h4 class="card-title"><?php echo esc_html($friends_colleagues['name_c']); ?></h4>
+                                    <p class="card-text"><?php echo esc_html($friends_colleagues['status_c']); ?></p>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-image">
-                                    <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/assets/images/wedding/brides-04.jpg" alt="Card image cap">
+                                <?php 
+                                if($friends_colleagues['image_d'][0]){
+                                    echo '<img class="card-img-top" src="'.$friends_colleagues['image_d'][0].'" alt="Card image cap">';
+                                }
+                                ?>
                                     <div class="show_icon">
                                         <div class="hero-icon_wrapper d-flex align-items-center text-center">
                                             <div class="hero-icon_inner mx-auto">
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($friends_colleagues['fb_link_d']); ?>">
                                                     <i class="fa fa-facebook"></i>
                                                 </a>
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($friends_colleagues['tw_link_d']); ?>">
                                                     <i class="fa fa-twitter"></i>
                                                 </a>
-                                                <a class="mx-2 mr-3" href="#">
+                                                <a class="mx-2 mr-3" href="<?php echo esc_url($friends_colleagues['ig_link_d']); ?>">
                                                     <i class="fa fa-instagram"></i>
                                                 </a>
                                             </div>
@@ -209,8 +241,8 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Carol Bradley</h4>
-                                    <p class="card-text">Cousin</p>
+                                    <h4 class="card-title"><?php echo esc_html($friends_colleagues['name_d']); ?></h4>
+                                    <p class="card-text"><?php echo esc_html($friends_colleagues['status_d']); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -219,17 +251,21 @@
                         <div class="card-deck">
                             <div class="card">
                                 <div class="card-image">
-                                    <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/assets/images/wedding/grooms-01.jpg" alt="Card image cap">
+                                <?php 
+                                if($grooms_men['image_a'][0]){
+                                    echo '<img class="card-img-top" src="'.$grooms_men['image_a'][0].'" alt="Card image cap">';
+                                }
+                                ?>
                                     <div class="show_icon">
                                         <div class="hero-icon_wrapper d-flex align-items-center text-center">
                                             <div class="hero-icon_inner mx-auto">
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($grooms_men['fb_link_a']); ?>">
                                                     <i class="fa fa-facebook"></i>
                                                 </a>
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($grooms_men['tw_link_a']); ?>">
                                                     <i class="fa fa-twitter"></i>
                                                 </a>
-                                                <a class="mx-2 mr-3" href="#">
+                                                <a class="mx-2 mr-3" href="<?php echo esc_url($grooms_men['ig_link_a']); ?>">
                                                     <i class="fa fa-instagram"></i>
                                                 </a>
                                             </div>
@@ -237,23 +273,27 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Jacob Munoz</h4>
-                                    <p class="card-text">Cousin</p>
+                                    <h4 class="card-title"><?php echo esc_html($grooms_men['name_a']); ?></h4>
+                                    <p class="card-text"><?php echo esc_html($grooms_men['status_a']); ?></p>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-image">
-                                    <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/assets/images/wedding/grooms-02.jpg" alt="Card image cap">
+                                <?php 
+                                if($grooms_men['image_b'][0]){
+                                    echo '<img class="card-img-top" src="'.$grooms_men['image_b'][0].'" alt="Card image cap">';
+                                }
+                                ?>
                                     <div class="show_icon">
                                         <div class="hero-icon_wrapper d-flex align-items-center text-center">
                                             <div class="hero-icon_inner mx-auto">
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($grooms_men['fb_link_b']); ?>">
                                                     <i class="fa fa-facebook"></i>
                                                 </a>
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($grooms_men['tw_link_b']); ?>">
                                                     <i class="fa fa-twitter"></i>
                                                 </a>
-                                                <a class="mx-2 mr-3" href="#">
+                                                <a class="mx-2 mr-3" href="<?php echo esc_url($grooms_men['ig_link_b']); ?>">
                                                     <i class="fa fa-instagram"></i>
                                                 </a>
                                             </div>
@@ -261,23 +301,27 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Jeffrey Wagner</h4>
-                                    <p class="card-text">Cousin</p>
+                                    <h4 class="card-title"><?php echo esc_html($grooms_men['name_b']); ?></h4>
+                                    <p class="card-text"><?php echo esc_html($grooms_men['status_b']); ?></p>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-image">
-                                    <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/assets/images/wedding/grooms-03.jpg" alt="Card image cap">
+                                <?php 
+                                if($grooms_men['image_c'][0]){
+                                    echo '<img class="card-img-top" src="'.$grooms_men['image_c'][0].'" alt="Card image cap">';
+                                }
+                                ?>
                                     <div class="show_icon">
                                         <div class="hero-icon_wrapper d-flex align-items-center text-center">
                                             <div class="hero-icon_inner mx-auto">
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($grooms_men['fb_link_c']); ?>">
                                                     <i class="fa fa-facebook"></i>
                                                 </a>
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($grooms_men['tw_link_c']); ?>">
                                                     <i class="fa fa-twitter"></i>
                                                 </a>
-                                                <a class="mx-2 mr-3" href="#">
+                                                <a class="mx-2 mr-3" href="<?php echo esc_url($grooms_men['ig_link_c']); ?>">
                                                     <i class="fa fa-instagram"></i>
                                                 </a>
                                             </div>
@@ -285,23 +329,27 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Philip Bates</h4>
-                                    <p class="card-text">Cousin</p>
+                                    <h4 class="card-title"><?php echo esc_html($grooms_men['name_c']); ?></h4>
+                                    <p class="card-text"><?php echo esc_html($grooms_men['status_c']); ?></p>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-image">
-                                    <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/assets/images/wedding/grooms-04.jpg" alt="Card image cap">
+                                <?php 
+                                if($grooms_men['image_d'][0]){
+                                    echo '<img class="card-img-top" src="'.$grooms_men['image_d'][0].'" alt="Card image cap">';
+                                }
+                                ?>
                                     <div class="show_icon">
                                         <div class="hero-icon_wrapper d-flex align-items-center text-center">
                                             <div class="hero-icon_inner mx-auto">
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($grooms_men['fb_link_d']); ?>">
                                                     <i class="fa fa-facebook"></i>
                                                 </a>
-                                                <a class="mx-2" href="#">
+                                                <a class="mx-2" href="<?php echo esc_url($grooms_men['tw_link_d']); ?>">
                                                     <i class="fa fa-twitter"></i>
                                                 </a>
-                                                <a class="mx-2 mr-3" href="#">
+                                                <a class="mx-2 mr-3" href="<?php echo esc_url($grooms_men['ig_link_d']); ?>">
                                                     <i class="fa fa-instagram"></i>
                                                 </a>
                                             </div>
@@ -309,8 +357,8 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Daniel Williams</h4>
-                                    <p class="card-text">Cousin</p>
+                                    <h4 class="card-title"><?php echo esc_html($grooms_men['name_d']); ?></h4>
+                                    <p class="card-text"><?php echo esc_html($grooms_men['status_d']); ?></p>
                                 </div>
                             </div>
                         </div>
