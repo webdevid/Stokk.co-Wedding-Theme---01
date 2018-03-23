@@ -3,12 +3,12 @@
     <img class="jarallax-img" src="<?php echo get_template_directory_uri();?>/assets/images/wedding/countdown-bg.jpg" height="400px" alt="countdown-background">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12" id="countdown">
+            <div class="col-12" id="countdown" data-countdown="<?php echo wp_kses_post($instance['countdown']) ?>">
                 <ul class="countdown_timer text-center">
                     <li class="col-3 col-lg-3">
                         <div class="shape-countdown">
-                            <span class="time"> 01 </span>
-                            <span class="meta"> days </span>
+                            <span class="time">70</span>
+                            <span class="meta"> Days </span>
                         </div>
                     </li>
                     <li class="col-3 col-lg-3">

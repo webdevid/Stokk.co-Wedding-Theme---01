@@ -12,19 +12,20 @@ class Stokk_Countdown_Widget extends SiteOrigin_Widget {
 
 		parent::__construct(
 			'stokk-countdown-widget',
-			__('Stokk Countdown Widget', 'hello-world-widget-text-domain'),
+			__('Stokk Countdown Widget', 'stokk-countdown-widget-text-domain'),
 			array(
-				'description' => __('A Stokk Countdown widget.', 'hello-world-widget-text-domain'),
-				'panels_groups' => array('stokk')
+				'description' => __('A Stokk Countdown widget.', 'stokk-countdown-widget-text-domain'),
+				'panels_groups' => array('stokk'),
+				'has_preview' => false,
 			),
 			array(
 
 			),
 			array(
-				'text' => array(
+				'countdown' => array(
 					'type' => 'text',
-					'label' => __('Hello world! goes here.', 'hello-world-widget-text-domain'),
-					'default' => 'Hello world!'
+					'label' => __('year/month/date', 'stokk-countdown-widget-text-domain'),
+					'default' => '2020/05/22'
 				),
 			),
 			plugin_dir_path(__FILE__)
