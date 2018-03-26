@@ -9,7 +9,9 @@ get_header();
 			the_content();
 
 		endwhile; // End of the loop.
-		
-
-get_footer();
 ?>
+</div><!-- #page -->
+
+<?php wp_footer(); ?>
+</body>
+</html>

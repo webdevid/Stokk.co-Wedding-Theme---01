@@ -136,7 +136,7 @@ function stokk_co_scripts() {
 	wp_enqueue_script( 'popup-02', get_template_directory_uri() . '/assets/js/index.js', array('jquery'), '20151215', true );
 	wp_enqueue_script( 'scrolling-nav', get_template_directory_uri() . '/assets/js/scrolling-nav.js', array('jquery'), '20151215', true );
 	wp_enqueue_script( 'airblock-wedding', get_template_directory_uri() . '/assets/js/airblock-wedding.js', array('jquery'), '20151215', true );
-	wp_enqueue_script( 'google-maps', 'https://maps.google.com/maps/api/js?libraries=geometry&v=3&key=AIzaSyAl-EDTJ5_uU3zBIX7-wNTu-qSZr1DO5Dw', array('jquery'), '20151215', true );
+
 	wp_enqueue_script( 'scripts-site', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), '20151215', true );
 
 	//wp_enqueue_script( 'stokk-co-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
