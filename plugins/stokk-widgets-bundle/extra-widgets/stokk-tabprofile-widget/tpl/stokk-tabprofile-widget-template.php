@@ -14,7 +14,7 @@ array(
     ),
     'bride' => array(
         'nav_title'=>$instance['bride']['nav_title'],
-        'nav_subtitle'=>$instance['bride']['nav_subtitle'],
+        'nav_subtitle'=>$instance['bride']['nav_subtitle'], 
         'content_title'=>$instance['bride']['content_title'],
         'content_subtitle'=>$instance['bride']['content_subtitle'],
         'bride_image'=>$this->stokk_src_image($instance['bride']['bride_image']),
@@ -46,7 +46,7 @@ array(
                         <div class="nav-tab-title"><?php echo esc_html($groom['nav_title']); ?></div>
                         <div class="nav-tab-subtitle"><?php echo esc_html($groom['nav_subtitle']); ?></div>
                     </div>
-                </a>
+                </a> 
             </li>
             <li class="nav-item">
                 <a class="nav-tab active" id="tab-nav-story" data-toggle="pill" href="#tab-story" aria-selected="true">
@@ -87,13 +87,13 @@ array(
                                 <?php echo esc_html($groom['content_title']); ?>
                                 <small> <?php echo esc_html($groom['content_subtitle']); ?>
                                 <span style="float:right;">
-                                        <a class="mx-2" href="#">
+                                        <a class="mx-2" href="<?php echo esc_url($groom['fb_link']); ?>">
                                             <i class="fa fa-facebook"></i>
                                         </a>
-                                        <a class="mx-2" href="#">
+                                        <a class="mx-2" href="<?php echo esc_url($groom['tw_link']); ?>">
                                             <i class="fa fa-twitter"></i>
                                         </a>
-                                        <a class="mx-2 mr-3" href="#">
+                                        <a class="mx-2 mr-3" href="<?php echo esc_url($groom['ig_link']); ?>">
                                             <i class="fa fa-instagram"></i>
                                         </a></span>
                                 </small>
@@ -136,13 +136,13 @@ array(
                                 <?php echo esc_html($bride['content_title']); ?>
                                 <small> <?php echo esc_html($bride['content_subtitle']); ?>
                                 <span style="float:right;">
-                                    <a class="mx-2" href="#">
+                                    <a class="mx-2" href="<?php echo esc_url($bride['fb_link']); ?>">
                                         <i class="fa fa-facebook"></i>
                                     </a>
-                                    <a class="mx-2" href="#">
+                                    <a class="mx-2" href="<?php echo esc_url($bride['tw_link']); ?>">
                                         <i class="fa fa-twitter"></i>
                                     </a>
-                                    <a class="mx-2 mr-3" href="#">
+                                    <a class="mx-2 mr-3" href="<?php echo esc_url($bride['ig_link']); ?>">
                                         <i class="fa fa-instagram"></i>
                                     </a>
                                 </span>
